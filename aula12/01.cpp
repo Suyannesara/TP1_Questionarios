@@ -83,6 +83,8 @@ void Pilha::inserir(Elemento *elemento) {
 }
 
 Elemento* Pilha::remover(){
+    if (ptr_primeiro == NULL)
+        return NULL;
     Elemento* elemento = ptr_primeiro;
     ptr_primeiro = ptr_primeiro->getProximo();
     return elemento;
